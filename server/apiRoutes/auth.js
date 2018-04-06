@@ -26,8 +26,8 @@ const verifyCallbackForGoogle = (token, refreshToken, profile, done) => {
 const DOMAIN_NAME = 'http://localhost:1337'
 
 const myGoogleStrategy = new GoogleStrategy({
- clientID: process.env.GOOGLE_CLIENT_ID,
- clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+ clientID: process.env.GOOGLE_CLIENT_ID || require('../../secrets').googleClientID,
+ clientSecret: process.env.GOOGLE_CLIENT_SECRET || require('../../secrets').googleClientSecret,
  callbackURL: DOMAIN_NAME + '/api/auth/google/cb'
 }, verifyCallbackForGoogle)
 
