@@ -23,7 +23,7 @@ const verifyCallbackForGoogle = (token, refreshToken, profile, done) => {
   .catch(done)
 }
 //domain name of web app
-const DOMAIN_NAME = 'http://localhost:1337'
+const DOMAIN_NAME = 'http://localhost:3000'
 
 const myGoogleStrategy = new GoogleStrategy({
  clientID: process.env.GOOGLE_CLIENT_ID || require('../../secrets').googleClientID,

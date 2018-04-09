@@ -46,7 +46,7 @@ app.get('/logout', (req, res, next) => {
   res.sendStatus(200)
 })
 
-const validFrontendRoutes = ['/', '/login']
+const validFrontendRoutes = ['/', '/login', '/game']
 const indexPath = path.join(__dirname, '../public/index.html')
 validFrontendRoutes.forEach(stateRoute => {
   app.get(stateRoute, (req, res, next) => {
