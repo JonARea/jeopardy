@@ -6,11 +6,15 @@ h2 {
   color: red;
 }
 
-.gameBoard {
+.game {
+  display: flex;
+}
+
+.gameboard {
   display: flex;
   justify-content: space-between;
   width: 90vw;
-  margin: 0 auto;
+  margin: 0 5vw;
 }
 
 .clueTile {
