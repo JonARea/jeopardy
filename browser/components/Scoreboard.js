@@ -28,7 +28,7 @@ class Scoreboard extends React.Component {
   render() {
     if (this.state.addingPlayer) {
       return (
-        <div>
+        <div className="scoreboard">
           <label htmlFor="playerName">New Player Name</label>
           <input
             name="playerName"
@@ -46,17 +46,18 @@ class Scoreboard extends React.Component {
     } else {
       return (
         <div className="scoreboard">
+          <h2>Players</h2>
+          {this.props.players.map(player => (
+            <div>
+              <h3>{player.name}</h3>
+              <h4>{player.score}</h4>
+            </div>))}
           <button
             className="btn addPlayerBtn"
             onClick={() => this.toggleAddPlayerForm()}
           >
             New Player
           </button>
-          {this.props.players.map(player => (
-            <div>
-              <h3>{player.name}</h3>
-              <h4>{player.score}</h4>
-            </div>))}
         </div>
       )
     }

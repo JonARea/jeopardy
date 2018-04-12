@@ -1,9 +1,13 @@
 * {
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
-h2 {
-  color: red;
+body {
+  text-align: center;
+  background-color: #222222;
+  color: #FFFFEE;
+  padding: 2em;
 }
 
 .game {
@@ -12,15 +16,21 @@ h2 {
 
 .gameboard {
   display: flex;
-  justify-content: space-between;
-  width: 90vw;
-  margin: 0 5vw;
+  width: 80vw;
+  height: 80vh;
+  background-color: #6AC0E3;
+  border-right: .5em solid #222222;
 }
 
 .clueTile {
+  display: flex;
+  margin: 1em;
   width: 180px;
   height: 100px;
-  background-color: aqua;
+  background-color: #1D77A4;
+  border-radius: 5%;
+  justify-content: center;
+  align-items: center;
 }
 
 .clueTile.finished {
@@ -34,7 +44,11 @@ h2 {
   height: 80vh;
   width: 80vw;
   z-index: 1;
-  background-color: aqua;
+  background-color: #1D77A4;
+}
+
+.scoreboard {
+  background-color: #6AC0E3;
 }
 
 .btn {
